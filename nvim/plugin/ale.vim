@@ -6,6 +6,8 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   }
 
+let g:ale_linters_ignore = ['tsserver']
+
 nmap <leader>d <Plug>(ale_fix)
 
 " Use a slightly slimmer error pointer

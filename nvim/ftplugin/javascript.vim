@@ -1,5 +1,4 @@
 let b:js_breakpoint_cmd = 'debugger;'
-let b:ale_fixers = ['prettier', 'eslint']
 setlocal foldmethod=manual
 setlocal concealcursor=nc
 setlocal cc=""
