@@ -13,7 +13,7 @@ else
   " UI
   Plugin 'morhetz/gruvbox'
   Plugin 'rakr/vim-one'
-  Plugin 'phanviet/vim-monokai-pro' " Currently selected
+  Plugin 'phanviet/vim-monokai-pro'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   "Project Navigations
@@ -23,7 +23,6 @@ else
   Plugin 'Lokaltog/vim-easymotion'
   Plugin 'kshenoy/vim-signature'
   Plugin 'haya14busa/incsearch.vim'
-
   "
   " General Editing
   "
@@ -90,9 +89,7 @@ else
   Plugin 'quentindecock/vim-cucumber-align-pipes'
   Plugin 'pangloss/vim-javascript'
   Plugin 'mxw/vim-jsx'
-  Plugin 'peitalin/vim-jsx-typescript'
   Plugin 'HerringtonDarkholme/yats.vim'
-  Plugin 'mhartington/nvim-typescript',     { 'do': './install.sh' }
   Plugin 'Shougo/deoplete.nvim'
   Plugin 'Shougo/denite.nvim'
   Plugin 'plasticboy/vim-markdown'
@@ -108,18 +105,11 @@ else
   Plugin 'elzr/vim-json'
   Plugin 'lambdatoast/elm.vim'
   Plugin 'leafgarland/typescript-vim'
-  Plugin 'digitaltoad/vim-pug'
-  Plugin 'elixir-lang/vim-elixir'
-  Plugin 'luan/vim-concourse'
   " Development Tool Integration
   Plugin 'tpope/vim-fugitive'
   Plugin 'airblade/vim-gitgutter'
   Plugin 'pivotal/tmux-config'
-  Plugin 'tpope/vim-dispatch'
-  Plugin 'carlobaldassi/ConqueTerm'
   Plugin 'sjl/vitality.vim'
-  Plugin 'brysgo/test_server'
-  Plugin 'mdelillo/vim-simple-bdd'
   Plugin 'ryanoasis/vim-devicons'
 
   call vundle#end()

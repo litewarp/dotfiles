@@ -1,17 +1,9 @@
 let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\ 'typescript': ['eslint']
+\ 'javascript': ['eslint', 'flow', 'stylelint', 'prettier'],
 \ }
 
-let g:ale_linter_aliases = {
-\  'typescript.tsx': 'typescript',
-\  'typescriptreact': 'typescript'
-\  }
-
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\   'typescript': ['eslint'],
-\   'typescriptreact': ['eslint'],
+\   'javascript': ['prettier'],
 \   }
 
 nmap <leader>d <Plug>(ale_fix)

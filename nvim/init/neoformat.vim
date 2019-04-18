@@ -1,1 +1,0 @@
-nmap gg-G :Neoformat
