@@ -97,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="/user/local/sbin:$PATH"
 
 source $HOME/.zshenv
+export PATH="/usr/local/sbin:$PATH"
+eval "$(rbenv init -)"

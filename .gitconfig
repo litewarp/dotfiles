@@ -1,3 +1,5 @@
 [user]
 	email = nicholas.sethi@gmail.com
 	name = Nick Sethi
+[core]
+	excludesfile = /Users/litewarp/.gitignore

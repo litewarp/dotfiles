@@ -12,10 +12,12 @@ else
   Plugin 'VundleVim/Vundle.vim'
   " UI
   Plugin 'morhetz/gruvbox'
+  Plugin 'mhartington/oceanic-next'
   Plugin 'rakr/vim-one'
   Plugin 'phanviet/vim-monokai-pro'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
+  Plugin 'NLKNguyen/papercolor-theme'
   "Project Navigations
   Plugin 'ctrlpvim/ctrlp.vim'
   "File Navigations
@@ -89,6 +91,8 @@ else
   Plugin 'quentindecock/vim-cucumber-align-pipes'
   Plugin 'pangloss/vim-javascript'
   Plugin 'mxw/vim-jsx'
+  Plugin 'styled-components/vim-styled-components'
+  Plugin 'hail2u/vim-css3-syntax'
   Plugin 'HerringtonDarkholme/yats.vim'
   Plugin 'Shougo/deoplete.nvim'
   Plugin 'Shougo/denite.nvim'
@@ -184,3 +188,9 @@ if has("autocmd")
 
 endif
 endif
+
+augroup VimCSS3Syntax
+  autocmd!
+
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
