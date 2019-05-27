@@ -1,7 +1,7 @@
 set termguicolors
 
-colorscheme gruvbox
+colorscheme jellybeans
 
-let g:airline_theme='gruvbox'
+let g:airline_theme='jellybeans'
 
 set background=dark

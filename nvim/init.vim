@@ -11,6 +11,7 @@ else
 
   Plugin 'VundleVim/Vundle.vim'
   " UI
+  Plugin 'jacoborus/tender.vim'
   Plugin 'morhetz/gruvbox'
   Plugin 'mhartington/oceanic-next'
   Plugin 'rakr/vim-one'
@@ -18,6 +19,7 @@ else
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'NLKNguyen/papercolor-theme'
+  Plugin 'nanotech/jellybeans.vim'
   "Project Navigations
   Plugin 'ctrlpvim/ctrlp.vim'
   "File Navigations
@@ -28,7 +30,6 @@ else
   "
   " General Editing
   "
-  Plugin 'tpope/vim-repeat'
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-endwise'
   Plugin 'tpope/vim-unimpaired'
@@ -85,17 +86,15 @@ else
   Plugin 'majutsushi/tagbar'
   " Languages
   Plugin 'vim-ruby/vim-ruby'
-  Plugin 'kchmck/vim-coffee-script'
-  Plugin 'tpope/vim-haml'
-  Plugin 'tpope/vim-cucumber'
-  Plugin 'quentindecock/vim-cucumber-align-pipes'
   Plugin 'pangloss/vim-javascript'
   Plugin 'mxw/vim-jsx'
   Plugin 'styled-components/vim-styled-components'
   Plugin 'hail2u/vim-css3-syntax'
-  Plugin 'HerringtonDarkholme/yats.vim'
   Plugin 'Shougo/deoplete.nvim'
+  Plugin 'steelsojka/deoplete-flow'
   Plugin 'Shougo/denite.nvim'
+  Plugin 'chr4/nginx.vim'
+
   Plugin 'plasticboy/vim-markdown'
   Plugin 'slim-template/vim-slim'
   Plugin 'reedes/vim-pencil'
@@ -189,8 +188,7 @@ if has("autocmd")
 endif
 endif
 
-augroup VimCSS3Syntax
+augroup FiletypeGroup
   autocmd!
-
-  autocmd FileType css setlocal iskeyword+=-
+  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 augroup END

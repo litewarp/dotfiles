@@ -97,6 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# fix % at first terminal
+
+unsetopt PROMPT_SP
 
 source $HOME/.zshenv
 export PATH="/usr/local/sbin:$PATH"

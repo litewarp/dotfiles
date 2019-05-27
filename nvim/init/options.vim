@@ -16,7 +16,8 @@ let g:indent_guides_guide_size = 1
 
 let g:ale_fix_on_save = 1
 let g:deoplete#enable_at_startup=1
-
+let g:airline#extensions#ale#enabled = 1
+let g:ale_set_loclist = 1
 
 let g:yankring_replace_n_pkey = '<C-Tab>'
 let g:yankring_replace_n_nkey = '<C-S-Tab>'
@@ -34,11 +35,6 @@ if &term == "screen-256color"
   set t_F9=[33~
 endif
 
-" surround.vim: Add $ as a jQuery surround, _ for Underscore.js
-autocmd FileType javascript let b:surround_36 = "$(\r)"
-                        \ | let b:surround_95 = "_(\r)"
-
-
 " Pad comment delimeters with spaces
 let NERDSpaceDelims = 1
 
@@ -51,7 +47,7 @@ runtime macros/matchit.vim
 " http://www.reddit.com/r/vim/comments/ggbcp/solarized_color_scheme/
 if has("gui_running")
   " Commented out to support vim-powerline
-  " let g:insert_mode_background_color = "#18434E"
+  let g:insert_mode_background_color = "#18434E"
 end
 " Automatically delete Fugitive buffers that are no longer being used.
 " Otherwise, they tend to fill up the buffer list.
@@ -72,6 +68,7 @@ let g:ctrlp_working_path_mode = 'rc'
 set tags+=gems.tags
 set clipboard=unnamed
 
+let g:javascript_plugin_flow = 1
 
 " Find unused Cucumber steps
 command! CucumberFindUnusedSteps :call CucumberFindUnusedSteps()
