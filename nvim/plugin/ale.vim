@@ -2,12 +2,14 @@ let g:ale_linter_aliases = { 'jsx': ['css', 'javascript'] }
 
 let g:ale_linters = {
 \ 'javascript': ['eslint', 'flow', 'stylelint', 'prettier'],
-\ 'jsx': ['stylelint']
+\ 'jsx': ['stylelint'],
+\ 'ruby' : ['prettier']
 \ }
 
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
-\   'jsx': ['prettier']
+\   'jsx': ['prettier'],
+\   'ruby': ['prettier'],
 \   }
 
 let g:ale_linters_ignore = ['tsserver']
