@@ -5,54 +5,24 @@
 module.exports = {
   config: {
     updateChannel: 'canary',
+    verminal: {
+      fontSize: 16,
+      fontFamily: "FuraCode Nerd Font",
+    },
     fontSize: 14,
     fontFamily: "FuraCode Nerd Font",
-    cursorColor: 'rgba(248,28,229,0.8)',
-    cursorShape: 'BLOCK',
-    foregroundColor: '#fff',
-    backgroundColor: '#000',
-    borderColor: '#333',
     css: `
-      .terms_19b1ydh {margin-top: 20px;}
       .header_windowHeader {
         display: none;
-      }
-      .tabs_nav {
-        top: 0;
-      }
-      .terms_terms {
-        margin-top: 0;
-      }
-      .terms_termsShifted {
-        margin-top: 30px;
       }
     `,
     
     termCSS: '',
-    colors: {
-      black: '#000000',
-      red: '#ff0000',
-      green: '#33ff00',
-      yellow: '#ffff00',
-      blue: '#0066ff',
-      magenta: '#cc00ff',
-      cyan: '#00ffff',
-      white: '#d0d0d0',
-      lightBlack: '#808080',
-      lightRed: '#ff0000',
-      lightGreen: '#33ff00',
-      lightYellow: '#ffff00',
-      lightBlue: '#0066ff',
-      lightMagenta: '#cc00ff',
-      lightCyan: '#00ffff',
-      lightWhite: '#ffffff'
-    },
-
 
     showHamburgerMenu: '',
     showWindowControls: '',
     
-    padding: '24px 6px 12px 6px',
+    padding: '3px 6px',
 
     shell: '/usr/local/bin/zsh',
 
@@ -98,12 +68,12 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyper-statusline',
-    'hyperterm-chesterish',
     'hyper-dark-scrollbar',
     'hyper-search',
     'hyperalfred',
     'hyperlinks',
-    'hypercwd'
+    'hypercwd',
+    'verminal'
   ],
 
   // in development, you can create a directory under

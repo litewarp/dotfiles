@@ -1,3 +1,6 @@
+
+
+
 let b:js_breakpoint_cmd = 'debugger;'
 
 setlocal foldmethod=manual

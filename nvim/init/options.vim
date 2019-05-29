@@ -22,6 +22,7 @@ let g:ale_set_loclist = 1
 let g:yankring_replace_n_pkey = '<C-Tab>'
 let g:yankring_replace_n_nkey = '<C-S-Tab>'
 let g:yankring_history_file = '.vim_yankring_history'
+let g:javascript_plugin_flow = 1
 
 let g:blockle_mapping = '<leader>B'
 " Add tmux's higher F-key capabilities
@@ -35,26 +36,11 @@ if &term == "screen-256color"
   set t_F9=[33~
 endif
 
-" Pad comment delimeters with spaces
 let NERDSpaceDelims = 1
 
 nmap gg-G :Neoformat
 
-
 runtime macros/matchit.vim
-" Change background color when inserting.
-" (Broken in terminal Vim: Solarized has a bug which makes it reload poorly.)
-" http://www.reddit.com/r/vim/comments/ggbcp/solarized_color_scheme/
-if has("gui_running")
-  " Commented out to support vim-powerline
-  let g:insert_mode_background_color = "#18434E"
-end
-" Automatically delete Fugitive buffers that are no longer being used.
-" Otherwise, they tend to fill up the buffer list.
-"
-" Credit to Drew Neil of Vimcasts:
-" http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
-
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Unset 'list' in :Gstatus window (which usually contains tab characters).
@@ -68,17 +54,4 @@ let g:ctrlp_working_path_mode = 'rc'
 set tags+=gems.tags
 set clipboard=unnamed
 
-let g:javascript_plugin_flow = 1
 
-" Find unused Cucumber steps
-command! CucumberFindUnusedSteps :call CucumberFindUnusedSteps()
-function! CucumberFindUnusedSteps()
-  let olderrorformat = &l:errorformat
-  try
-    set errorformat=%m#\ %f:%l
-    cexpr system('bundle exec cucumber --no-profile --no-color --format usage --dry-run features \| grep "NOT MATCHED BY ANY STEPS" -B1 \| egrep -v "(--\|NOT MATCHED BY ANY STEPS)"')
-    cwindow
-  finally
-    let &l:errorformat = olderrorformat
-  endtry
-endfunction
