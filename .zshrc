@@ -97,10 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# fix % at first terminal
-
-unsetopt PROMPT_SP
-
 source $HOME/.zshenv
 export PATH="/usr/local/sbin:$PATH"
 eval "$(rbenv init -)"
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
