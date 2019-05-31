@@ -70,10 +70,8 @@ module.exports = {
     'hyper-statusline',
     'hyper-dark-scrollbar',
     'hyper-search',
-    'hyperalfred',
-    'hyperlinks',
     'hypercwd',
-    'verminal'
+    'hyper-solarized-dark-highcontrast'
   ],
 
   // in development, you can create a directory under
