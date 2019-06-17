@@ -1,7 +1,7 @@
 set termguicolors
 
-colorscheme jellybeans
+colorscheme papercolor
 
-let g:airline_theme='jellybeans'
+let g:airline_theme='papercolor'
 
 set background=dark

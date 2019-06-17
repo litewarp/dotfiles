@@ -71,7 +71,7 @@ module.exports = {
     'hyper-dark-scrollbar',
     'hyper-search',
     'hypercwd',
-    'hyper-solarized-dark-highcontrast'
+    'hyper-seti-monokai'
   ],
 
   // in development, you can create a directory under

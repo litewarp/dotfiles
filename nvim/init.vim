@@ -10,11 +10,9 @@ else
   call vundle#begin()
 
   Plugin 'VundleVim/Vundle.vim'
-  " UI
-  Plugin 'jacoborus/tender.vim'
+
   Plugin 'morhetz/gruvbox'
-  Plugin 'mhartington/oceanic-next'
-  Plugin 'rakr/vim-one'
+  Plugin 'jacoborus/tender.vim'
   Plugin 'phanviet/vim-monokai-pro'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
@@ -51,7 +49,6 @@ else
   Plugin 'tpope/vim-rbenv'
   Plugin 'tpope/vim-rake'
 
-  Plugin 'ervandew/supertab'
   Plugin 'nertzy/j-split'
 
   Plugin 'matt-royal/diffthese'
@@ -64,13 +61,9 @@ else
   Plugin 'Peeja/vim-cdo'
   Plugin 'MarcWeber/vim-addon-mw-utils'
   Plugin 'tomtom/tlib_vim'
-  Plugin 'garbas/vim-snipmate'
-  Plugin 'honza/vim-snippets'
   Plugin 'YankRing.vim'
-  Plugin 'terryma/vim-multiple-cursors'
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'tpope/vim-projectionist'
-  Plugin 'kien/rainbow_parentheses.vim'
   Plugin 'sbdchd/neoformat'
   Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'dhruvasagar/vim-table-mode'
@@ -87,20 +80,21 @@ else
   " Languages
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'pangloss/vim-javascript'
-  Plugin 'mxw/vim-jsx'
+  Plugin 'maxmellon/vim-jsx-pretty'
   Plugin 'styled-components/vim-styled-components'
   Plugin 'hail2u/vim-css3-syntax'
-  Plugin 'Shougo/deoplete.nvim'
-  Plugin 'steelsojka/deoplete-flow'
+  Plugin 'w0rp/ale'
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plugin 'wokalski/autocomplete-flow'
+  Plugin 'Shougo/neosnippet'
+  Plugin 'Shougo/neosnippet-snippets'
   Plugin 'Shougo/denite.nvim'
   Plugin 'chr4/nginx.vim'
 
   Plugin 'plasticboy/vim-markdown'
   Plugin 'slim-template/vim-slim'
   Plugin 'reedes/vim-pencil'
-  Plugin 'nono/vim-handlebars'
-  Plugin 'juvenn/mustache.vim'
-  Plugin 'w0rp/ale'
+  Plugin 'mustache/vim-mustache-handlebars'
   Plugin 'fatih/vim-go'
   Plugin 'rosstimson/scala-vim-support'
   Plugin 'guns/vim-clojure-static'
@@ -108,6 +102,7 @@ else
   Plugin 'elzr/vim-json'
   Plugin 'lambdatoast/elm.vim'
   Plugin 'leafgarland/typescript-vim'
+
   " Development Tool Integration
   Plugin 'tpope/vim-fugitive'
   Plugin 'airblade/vim-gitgutter'
@@ -169,9 +164,7 @@ endif
 
 if has("autocmd")
   filetype plugin indent on
-
-
-  " Automatically clean trailing whitespace
+  "Automatically clean trailing whitespace
   autocmd BufWritePre * :%s/\s\+$//e
 
   autocmd BufRead,BufNewFile COMMIT_EDITMSG call pencil#init({'wrap': 'soft'})
@@ -185,10 +178,6 @@ if has("autocmd")
 
   autocmd BufRead,BufNewFile gitconfig set ft=.gitconfig
 
-endif
-endif
-
-augroup FiletypeGroup
-  autocmd!
   au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-augroup END
+endif
+endif

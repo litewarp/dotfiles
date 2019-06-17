@@ -3,17 +3,16 @@ let g:ale_linter_aliases = { 'jsx': ['css', 'javascript'] }
 let g:ale_linters = {
 \ 'javascript': ['eslint', 'flow',],
 \ 'jsx': ['eslint', 'stylelint',],
-\ 'ruby' : ['prettier']
+\ 'ruby': ['rubocop'],
 \ }
 
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'jsx': ['prettier', 'stylelint'],
-\   'ruby': ['prettier'],
+\   'ruby': ['rubocop']
 \   }
 
 let g:ale_linters_ignore = ['tsserver']
-
 nmap <leader>d <Plug>(ale_fix)
 
 " Use a slightly slimmer error pointer
@@ -30,3 +29,4 @@ nmap <silent> ∆ <Plug>(ale_next_wrap)
 let g:jsx_ext_required = 0
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--no-semi --trailing-comma all --insert-pragma'
+let g:ale_ruby_rubocop_executable = 'bundle'
