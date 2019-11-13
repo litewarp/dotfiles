@@ -1,7 +1,7 @@
 set termguicolors
 
-colorscheme papercolor
+colorscheme gruvbox
 
-let g:airline_theme='papercolor'
+let g:airline_theme='gruvbox'
 
 set background=dark

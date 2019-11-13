@@ -17,34 +17,26 @@ else
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'NLKNguyen/papercolor-theme'
+  Plugin 'arcticicestudio/nord-vim'
   Plugin 'nanotech/jellybeans.vim'
   "Project Navigations
-  Plugin 'ctrlpvim/ctrlp.vim'
-  "File Navigations
-  Plugin 'vim-scripts/matchit.zip'
-  Plugin 'Lokaltog/vim-easymotion'
-  Plugin 'kshenoy/vim-signature'
+  "Incremental Highlight
   Plugin 'haya14busa/incsearch.vim'
-  "
   " General Editing
   "
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-endwise'
   Plugin 'tpope/vim-unimpaired'
-  Plugin 'kana/vim-textobj-user'
 
   Plugin 'scrooloose/nerdcommenter'
-  Plugin 'Julian/vim-textobj-variable-segment'
-  Plugin 'kana/vim-textobj-line'
-  Plugin 'thinca/vim-textobj-between'
   Plugin 'sjl/gundo.vim'
+  " Line up text
   Plugin 'godlygeek/tabular'
 
   " Ruby / Rails
   "
   Plugin 'tpope/vim-rails'
   Plugin 'ecomba/vim-ruby-refactoring'
-  Plugin 'nelstrom/vim-textobj-rubyblock'
   Plugin 'jgdavey/vim-blockle'
   Plugin 'tpope/vim-rbenv'
   Plugin 'tpope/vim-rake'
@@ -79,13 +71,11 @@ else
   Plugin 'majutsushi/tagbar'
   " Languages
   Plugin 'vim-ruby/vim-ruby'
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'maxmellon/vim-jsx-pretty'
   Plugin 'styled-components/vim-styled-components'
+  Plugin 'sheerun/vim-polyglot'
   Plugin 'hail2u/vim-css3-syntax'
   Plugin 'w0rp/ale'
-  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plugin 'wokalski/autocomplete-flow'
+  Plugin 'neoclide/coc.nvim', {'branch': 'release'}
   Plugin 'Shougo/neosnippet'
   Plugin 'Shougo/neosnippet-snippets'
   Plugin 'Shougo/denite.nvim'
@@ -128,6 +118,7 @@ set noswapfile
 set history=50
 set ruler
 set showcmd
+set cmdheight=2
 set laststatus=2
 set autowrite
 set noshowmode
@@ -140,6 +131,10 @@ set expandtab
 set scrolloff=3
 set hidden
 set inccommand=nosplit
+" coc.nvim
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
 
 " Line numbers
 set number

@@ -1,3 +1,7 @@
+let g:ale_completion_enabled = 1
+
+let g:ale_completion_tsserver_autoimport = 1
+
 let g:ale_linter_aliases = { 'jsx': ['css', 'javascript'] }
 
 let g:ale_linters = {
