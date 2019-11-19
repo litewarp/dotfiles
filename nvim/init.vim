@@ -20,6 +20,7 @@ else
   Plugin 'arcticicestudio/nord-vim'
   Plugin 'nanotech/jellybeans.vim'
   "Project Navigations
+  Plugin 'ctrlpvim/ctrlp.vim'
   "Incremental Highlight
   Plugin 'haya14busa/incsearch.vim'
   " General Editing
