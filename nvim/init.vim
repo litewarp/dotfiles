@@ -17,8 +17,6 @@ else
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'NLKNguyen/papercolor-theme'
-  Plugin 'arcticicestudio/nord-vim'
-  Plugin 'nanotech/jellybeans.vim'
   "Project Navigations
   Plugin 'ctrlpvim/ctrlp.vim'
   "Incremental Highlight
@@ -26,7 +24,6 @@ else
   " General Editing
   "
   Plugin 'tpope/vim-surround'
-  Plugin 'tpope/vim-endwise'
   Plugin 'tpope/vim-unimpaired'
 
   Plugin 'scrooloose/nerdcommenter'
@@ -36,15 +33,6 @@ else
 
   " Ruby / Rails
   "
-  Plugin 'tpope/vim-rails'
-  Plugin 'ecomba/vim-ruby-refactoring'
-  Plugin 'jgdavey/vim-blockle'
-  Plugin 'tpope/vim-rbenv'
-  Plugin 'tpope/vim-rake'
-
-  Plugin 'nertzy/j-split'
-
-  Plugin 'matt-royal/diffthese'
   Plugin 'camelcasemotion'
   Plugin 'nertzy/edit-plus'
   Plugin 'brysgo/quickfixfix'
