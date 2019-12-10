@@ -4,4 +4,4 @@ colorscheme PaperColor
 
 let g:airline_theme='papercolor'
 
-set background=light
+set background=dark

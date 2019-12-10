@@ -6,7 +6,7 @@ let need_to_install_plugins=0
 if empty(system("grep lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim"))
   echoerr "Vundle plugins are not installed. Please run ~/.vim/bin/install"
 else
-  set rtp+=~/.config/nvim/bundle/Vundle.vim
+  set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
 
   Plugin 'VundleVim/Vundle.vim'
@@ -17,14 +17,15 @@ else
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'NLKNguyen/papercolor-theme'
+
   "Project Navigations
   Plugin 'ctrlpvim/ctrlp.vim'
   "Incremental Highlight
   Plugin 'haya14busa/incsearch.vim'
   " General Editing
   "
-  Plugin 'tpope/vim-surround'
-  Plugin 'tpope/vim-unimpaired'
+  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'alvan/vim-closetag'
 
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'sjl/gundo.vim'
@@ -63,8 +64,7 @@ else
   Plugin 'styled-components/vim-styled-components'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'hail2u/vim-css3-syntax'
-  Plugin 'w0rp/ale'
-  Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+  Plugin 'neoclide/coc.nvim', {'do': 'coc#util#install()'}
   Plugin 'Shougo/neosnippet'
   Plugin 'Shougo/neosnippet-snippets'
   Plugin 'Shougo/denite.nvim'
@@ -99,7 +99,7 @@ else
 
 " General Config
 
-set shell=zsh
+set shell=bash
 set backspace=2
 set nobackup
 set nowritebackup
@@ -145,6 +145,8 @@ endif
 
 " Autocommands
 "
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 if has("autocmd")
   filetype plugin indent on
