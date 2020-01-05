@@ -81,6 +81,7 @@ else
   Plugin 'elzr/vim-json'
   Plugin 'lambdatoast/elm.vim'
   Plugin 'leafgarland/typescript-vim'
+  Plugin 'jparise/vim-graphql'
 
   " Development Tool Integration
   Plugin 'tpope/vim-fugitive'

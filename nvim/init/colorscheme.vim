@@ -1,7 +1,7 @@
 set termguicolors
 
-colorscheme PaperColor
+colorscheme tender
 
-let g:airline_theme='papercolor'
+let g:airline_theme='tender'
 
 set background=dark
