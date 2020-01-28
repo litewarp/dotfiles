@@ -1,7 +1,9 @@
 set termguicolors
 
-colorscheme tender
+let g:dracula_colorterm = 0
 
-let g:airline_theme='tender'
+colorscheme dracula
+
+let g:airline_theme='dracula'
 
 set background=dark

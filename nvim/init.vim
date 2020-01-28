@@ -10,7 +10,7 @@ else
   call vundle#begin()
 
   Plugin 'VundleVim/Vundle.vim'
-
+  Plugin 'dracula/vim'
   Plugin 'morhetz/gruvbox'
   Plugin 'jacoborus/tender.vim'
   Plugin 'phanviet/vim-monokai-pro'
@@ -65,9 +65,6 @@ else
   Plugin 'sheerun/vim-polyglot'
   Plugin 'hail2u/vim-css3-syntax'
   Plugin 'neoclide/coc.nvim', {'do': 'coc#util#install()'}
-  Plugin 'Shougo/neosnippet'
-  Plugin 'Shougo/neosnippet-snippets'
-  Plugin 'Shougo/denite.nvim'
   Plugin 'chr4/nginx.vim'
 
   Plugin 'plasticboy/vim-markdown'
