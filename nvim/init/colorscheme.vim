@@ -1,9 +1,7 @@
 set termguicolors
 
-let g:dracula_colorterm = 0
+colorscheme monokai_pro
 
-colorscheme dracula
-
-let g:airline_theme='dracula'
+" let g:airline_theme='monokai_pro'
 
 set background=dark

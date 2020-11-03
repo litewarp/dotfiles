@@ -7,6 +7,7 @@ if empty(system("grep lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim"))
   echoerr "Vundle plugins are not installed. Please run ~/.vim/bin/install"
 else
   set rtp+=~/.vim/bundle/Vundle.vim
+  set rtp+=~/.vim/bundle/fzf
   call vundle#begin()
 
   Plugin 'VundleVim/Vundle.vim'
@@ -19,7 +20,9 @@ else
   Plugin 'NLKNguyen/papercolor-theme'
 
   "Project Navigations
-  Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'junegunn/fzf'
+  Plugin 'junegunn/fzf.vim'
+
   "Incremental Highlight
   Plugin 'haya14busa/incsearch.vim'
   " General Editing
@@ -68,6 +71,7 @@ else
   Plugin 'chr4/nginx.vim'
 
   Plugin 'plasticboy/vim-markdown'
+  Plugin 'vim-markdown-preview'
   Plugin 'slim-template/vim-slim'
   Plugin 'reedes/vim-pencil'
   Plugin 'mustache/vim-mustache-handlebars'
