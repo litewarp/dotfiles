@@ -35,24 +35,6 @@ else
   " Line up text
   Plugin 'godlygeek/tabular'
 
-  " Ruby / Rails
-  "
-  Plugin 'camelcasemotion'
-  Plugin 'nertzy/edit-plus'
-  Plugin 'brysgo/quickfixfix'
-  Plugin 'regreplop.vim'
-  Plugin 'Peeja/insert_mode_background_color'
-  Plugin 'vim-scripts/L9'
-  Plugin 'Peeja/vim-cdo'
-  Plugin 'MarcWeber/vim-addon-mw-utils'
-  Plugin 'tomtom/tlib_vim'
-  Plugin 'YankRing.vim'
-  Plugin 'editorconfig/editorconfig-vim'
-  Plugin 'tpope/vim-projectionist'
-  Plugin 'sbdchd/neoformat'
-  Plugin 'nathanaelkane/vim-indent-guides'
-  Plugin 'dhruvasagar/vim-table-mode'
-
   " Window Management
   Plugin 'ZoomWin'
   " Searching
@@ -67,7 +49,7 @@ else
   Plugin 'styled-components/vim-styled-components'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'hail2u/vim-css3-syntax'
-  Plugin 'neoclide/coc.nvim', {'do': 'coc#util#install()'}
+  Plugin 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
   Plugin 'chr4/nginx.vim'
 
   Plugin 'plasticboy/vim-markdown'
@@ -83,6 +65,7 @@ else
   Plugin 'lambdatoast/elm.vim'
   Plugin 'leafgarland/typescript-vim'
   Plugin 'jparise/vim-graphql'
+  Plugin 'neo4j-contrib/cypher-vim-syntax'
 
   " Development Tool Integration
   Plugin 'tpope/vim-fugitive'
