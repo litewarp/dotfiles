@@ -16,10 +16,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
 
-"ale_settings
-let g:ale_fix_on_save = 1
-let g:ale_set_loclist = 1
-
 let g:neosnippet#enable_completed_snippet = 1
 
 function! StrTrim(txt)

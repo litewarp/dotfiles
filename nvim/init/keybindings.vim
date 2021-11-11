@@ -35,17 +35,10 @@ nmap <C-h>      <C-w>h
 nmap <C-l>      <C-w>l
 
 " Open .vimrc file in new tab. Think Command + , [Preferences...] but with Shift.
-map <D-<>       :tabedit ~/.vimrc<CR>
+map <D-<>       :tabedit ~/.config/nvim/init.vim<CR>
 
 " Reload .vimrc
 map <leader>rv  :source ~/.config/nvim/init.vim<CR>
-
-" Undo/redo - Doesn't MacVim already have this?
-map <D-z>       :earlier 1<CR>
-map <D-Z>       :later 1<CR>
-
-" Auto-indent whole file
-nmap <leader>=  gg=G``
 
 " Jump to a new line in insert mode
 imap <D-CR>     <Esc>o
@@ -137,8 +130,8 @@ nmap <leader>rp :RainbowParenthesesToggle<CR>
 nnoremap <leader>bdd :SimpleBDD<CR>
 vnoremap <leader>bdd :SimpleBDD<CR>
 
-nmap <C-P> :GFiles<CR>
-nnoremap <leader>f :GFiles<CR>
+nmap <C-P> :Files<CR>
+nnoremap <leader>f :Files<CR>
 
 inoremap jj <ESC>
 
