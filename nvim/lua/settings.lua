@@ -50,7 +50,7 @@ vim.g.did_load_filetyps           = 1               --- Do not source the defaul
 vim.g.speeddating_no_mappings     = 1
 vim.g.dashboard_default_executive = 'telescope'
 
--- vim.g.node_host_prog = vim.fn.expand("~/.nvm/versions/node/v16.13.0/bin/neovim-node-host")
+-- vim.g.node_host_prog = vim.fn.expand("~/.local/share/nvm/v16.13.0/bin/neovim-node-host")
 
 vim.cmd('filetype plugin indent on')                --- Enables plugin & indent
 vim.cmd('set formatoptions-=c')                     --- Stop newline continuation of comments
