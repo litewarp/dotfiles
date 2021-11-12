@@ -98,4 +98,4 @@ require'nvim-tree'.setup {
     { key = "g?",                           cb = tree_cb("toggle_help") },
 } ]]
 
-vim.api.nvim_set_keymap("n", "<C-e>", "<cmd>lua require'nvim-tree'.toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<Bar>", "<cmd>lua require'nvim-tree'.toggle()<CR>", {noremap = true, silent = true})
