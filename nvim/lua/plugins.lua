@@ -98,7 +98,6 @@ use {'antoinemadec/FixCursorHold.nvim'} -- Needed while issue https://github.com
 use {'windwp/nvim-autopairs', after = {'nvim-treesitter', 'nvim-cmp'}, config = "require('plugins.autopairs')"}
 use {'p00f/nvim-ts-rainbow'}
 use {'mattn/emmet-vim'}
-use {'potatoesmaster/i3-vim-syntax'}
 use {'lukas-reineke/indent-blankline.nvim', config = "require('plugins.indent')"}
 use {'norcalli/nvim-colorizer.lua', config = "require('plugins.colorizer')"}
 use {'SirVer/ultisnips', requires = {"honza/vim-snippets", "quangnguyen30192/cmp-nvim-ultisnips"}, config = "require('plugins.ultisnips')", after = 'nvim-cmp'}

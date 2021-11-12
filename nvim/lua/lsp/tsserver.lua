@@ -1,4 +1,3 @@
-local ts_utils = require("nvim-lsp-ts-utils")
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.preselectSupport = true
@@ -24,6 +23,8 @@ require'lspconfig'.tsserver.setup({
 
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
     buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
+
+    local ts_utils = require("nvim-lsp-ts-utils")
 
     ts_utils.setup {
         debug = false,

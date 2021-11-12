@@ -1,3 +1,4 @@
+vim.cmd('set termguicolors')
 require('impatient')
 require('config')
 require('colorscheme')

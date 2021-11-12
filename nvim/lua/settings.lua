@@ -28,7 +28,7 @@ vim.o.backup          = false                       --- Recommended by coc
 vim.o.writebackup     = false                       --- Recommended by coc
 vim.o.swapfile        = false                       --- Recommended by coc
 vim.o.emoji           = false                       --- Fix emoji display
-vim.o.undodir         = "/home/ecosse/.vim/undodir" --- Dir for undos
+vim.o.undodir         = "/home/litewarp/.vim/undodir" --- Dir for undos
 vim.o.undofile        = true                        --- Sets undo to file
 vim.o.incsearch       = true                        --- Start searching before pressing enter
 vim.o.conceallevel    = 0                           --- Show `` in markdown files
@@ -49,6 +49,8 @@ vim.bo.expandtab      = true
 vim.g.did_load_filetyps           = 1               --- Do not source the default filetype.vim
 vim.g.speeddating_no_mappings     = 1
 vim.g.dashboard_default_executive = 'telescope'
+
+-- vim.g.node_host_prog = vim.fn.expand("~/.nvm/versions/node/v16.13.0/bin/neovim-node-host")
 
 vim.cmd('filetype plugin indent on')                --- Enables plugin & indent
 vim.cmd('set formatoptions-=c')                     --- Stop newline continuation of comments
