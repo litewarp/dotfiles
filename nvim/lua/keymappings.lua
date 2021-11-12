@@ -96,8 +96,8 @@ vim.cmd [[
   smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
 ]]
 
--- Space to NOP to prevent Leader issues
-vim.api.nvim_set_keymap("n", "<Space>", "<NOP>", { noremap = true, silent = true })
+-- Comma to NOP to prevent Leader issues
+vim.api.nvim_set_keymap("n", ",", "<NOP>", { noremap = true, silent = true })
 
 -- Open links under cursor in browser with gx
 if vim.fn.has('macunix') == 1 then
