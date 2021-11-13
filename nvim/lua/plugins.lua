@@ -125,6 +125,10 @@ use {'hrsh7th/cmp-nvim-lsp', requires = "hrsh7th/nvim-cmp", after = 'nvim-cmp'}
 use {'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp'}
 use {'David-Kunz/cmp-npm', requires = 'nvim-lua/plenary.nvim', after = 'nvim-cmp', config = "require('plugins.cmp-npm')"}
 
+
+-- Formatters
+use {'mhartington/formatter.nvim', config="require('plugins.formatter')"}
+
 -- Nvim Tree
 use {'kyazdani42/nvim-tree.lua',
   requires = { 'kyazdani42/nvim-web-devicons'},
