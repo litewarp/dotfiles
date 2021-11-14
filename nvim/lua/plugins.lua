@@ -152,7 +152,7 @@ use({
 
 -- LSP Cmp
 use({ 'hrsh7th/nvim-cmp', event = 'InsertEnter', config = "require('plugins.cmp')" })
-use({ 'hrsh7th/cmp-vsnip', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
+-- use({ 'hrsh7th/cmp-vsnip', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
 use({ 'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
 use({ 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
 use({ 'hrsh7th/cmp-calc', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
@@ -170,9 +170,6 @@ use({
   after = 'nvim-cmp',
   config = "require('plugins.cmp-npm')",
 })
-
--- Formatters
--- use({ 'mhartington/formatter.nvim', config = "require('plugins.formatter')" })
 
 -- Nvim Tree
 use({
