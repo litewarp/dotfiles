@@ -1,8 +1,6 @@
 -- Setup global configuration. More on configuration below.
 local cmp = require('cmp')
 
-local lspkind = require('lspkind')
-
 local has_any_words_before = function()
   if vim.api.nvim_buf_get_option(0, 'buftype') == 'prompt' then
     return false
@@ -20,19 +18,6 @@ end
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
-
-local source_mapping = {
-  buffer = EcoVim.icons.buffer .. '[BUF]',
-  calc = EcoVim.icons.calculator,
-  cmp_tabnine = EcoVim.icons.light,
-  npm = EcoVim.icons.terminal .. '[NPM]',
-  nvim_lsp = EcoVim.icons.paragraph .. '[LSP]',
-  nvim_lua = EcoVim.icons.bomb,
-  path = EcoVim.icons.folderOpen2,
-  treesitter = EcoVim.icons.tree,
-  ultisnips = EcoVim.icons.snippet,
-  zsh = EcoVim.icons.terminal .. '[ZSH]',
-}
 
 cmp.setup({
 
@@ -102,71 +87,18 @@ cmp.setup({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     }),
-    ['<C-Space>'] = cmp.mapping({
-      i = function(fallback)
-        if cmp.visible() then
-          if vim.fn['UltiSnips#CanExpandSnippet']() == 1 then
-            return press('<C-R>=UltiSnips#ExpandSnipet()<CR>')
-          end
-          cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace })
-        elseif has_any_words_before() then
-          press('<Space>')
-        else
-          fallback()
-        end
-      end,
-      c = function()
-        if cmp.visible() then
-          cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace })
-        else
-          vim.api.nvim_feedkeys(t('<Down>'), 'n', true)
-        end
-      end,
-    }),
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if
-        cmp.get_selected_entry() == nil and vim.fn['UltiSnips#CanExpandSnippet']() == 1
-      then
-        press('<C-R>=UltiSnips#ExpandSnippet()<CR>')
-      elseif vim.fn['UltiSnips#CanJumpForwards']() == 1 then
-        press('<ESC>:call UltiSnips#JumpForwards()<CR>')
-      elseif cmp.visible() then
-        cmp.select_next_item()
-      elseif has_any_words_before() then
-        press('<Tab>')
-      else
-        fallback()
-      end
-    end, {
-      'i',
-      's',
-      'c',
-    }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if vim.fn['UltiSnips#CanJumpBackwards']() == 1 then
-        press('<ESC>:call UltiSnips#JumpBackwards()<CR>')
-      elseif cmp.visible() then
-        cmp.select_prev_item()
-      else
-        fallback()
-      end
-    end, {
-      'i',
-      's',
-      'c',
-    }),
   },
 
   snippet = {
     expand = function(args)
-      vim.fn['UltiSnips#Anon'](args.body)
+      require('luasnip').lsp_expand(args.body)
     end,
   },
 
   -- You should specify your *installed* sources.
   sources = {
     { name = 'nvim_lsp', max_item_count = 10 },
-    { name = 'ultisnips', max_item_count = 5 },
+    { name = 'luasnip', max_item_count = 5 },
     { name = 'nvim_lua', max_item_count = 5 },
     { name = 'buffer', keyword_length = 5, max_item_count = 5 },
     { name = 'path' },

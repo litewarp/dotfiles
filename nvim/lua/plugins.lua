@@ -122,13 +122,7 @@ use({ 'p00f/nvim-ts-rainbow' })
 use({ 'mattn/emmet-vim' })
 use({ 'lukas-reineke/indent-blankline.nvim', config = "require('plugins.indent')" })
 use({ 'norcalli/nvim-colorizer.lua', config = "require('plugins.colorizer')" })
-use({
-  'SirVer/ultisnips',
-  requires = { 'honza/vim-snippets', 'quangnguyen30192/cmp-nvim-ultisnips' },
-  config = "require('plugins.ultisnips')",
-  after = 'nvim-cmp',
-})
-use({ 'hrsh7th/vim-vsnip' })
+use({ 'L3MON4D3/LuaSnip', requires = 'saadparwaiz1/cmp_luasnip' })
 use({ 'lpinilla/vim-codepainter' })
 
 -- LSP
@@ -152,7 +146,6 @@ use({
 
 -- LSP Cmp
 use({ 'hrsh7th/nvim-cmp', event = 'InsertEnter', config = "require('plugins.cmp')" })
--- use({ 'hrsh7th/cmp-vsnip', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
 use({ 'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
 use({ 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
 use({ 'hrsh7th/cmp-calc', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' })
