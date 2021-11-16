@@ -35,7 +35,12 @@ vim.api.nvim_set_keymap('n', '<C-p>', '<CMD>Telescope git_files<CR>', { noremap 
 vim.api.nvim_set_keymap('n', '<S-p>', '<CMD>Telescope live_grep<CR>', { noremap = true })
 
 -- Remove highlights
-vim.api.nvim_set_keymap('n', '<CR>', ':noh<CR><CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>l',
+  ':noh<CR><CR>',
+  { noremap = true, silent = true }
+)
 
 -- Find word/file across project
 vim.api.nvim_set_keymap(
@@ -144,12 +149,6 @@ vim.api.nvim_set_keymap(
   ":if !switch#Switch({'reverse': 1}) <bar> call speeddating#increment(-v:count1) <bar> endif<CR>",
   { noremap = true, silent = true }
 )
-
--- VSnip
-vim.cmd([[
-  imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
-  smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
-]])
 
 -- Comma to NOP to prevent Leader issues
 vim.api.nvim_set_keymap('n', ',', '<NOP>', { noremap = true, silent = true })
