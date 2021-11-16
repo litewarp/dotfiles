@@ -120,6 +120,11 @@ use({
   after = { 'nvim-treesitter', 'nvim-cmp' },
   config = "require('plugins.autopairs')",
 })
+use({
+  'windwp/nvim-ts-autotag',
+  after = { 'nvim-treesitter', 'nvim-cmp' },
+  config = "require('plugins.autotag')",
+})
 use({ 'p00f/nvim-ts-rainbow' })
 use({ 'mattn/emmet-vim' })
 use({ 'lukas-reineke/indent-blankline.nvim', config = "require('plugins.indent')" })

@@ -1,27 +1,26 @@
-
-require'nvim-treesitter.install'.compilers = { "gcc" }
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+require('nvim-treesitter.install').compilers = { 'gcc' }
+require('nvim-treesitter.configs').setup({
+  ensure_installed = 'all', -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
-    enable = true,              -- false will disable the whole extension
+    enable = true, -- false will disable the whole extension
   },
 
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection    = "<leader>gnn",
-      node_incremental  = "<leader>gnr",
-      scope_incremental = "<leader>gne",
-      node_decremental  = "<leader>gnt",
+      init_selection = '<leader>gnn',
+      node_incremental = '<leader>gnr',
+      scope_incremental = '<leader>gne',
+      node_decremental = '<leader>gnt',
     },
   },
 
   indent = {
-    enable = true
+    enable = true,
   },
 
   rainbow = {
-    enable = true
+    enable = true,
   },
 
   context_commentstring = {
@@ -34,20 +33,20 @@ require'nvim-treesitter.configs'.setup {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
-        ["]]"] = "@function.outer",
-        ["]m"] = "@class.outer",
+        [']]'] = '@function.outer',
+        [']m'] = '@class.outer',
       },
       goto_next_end = {
-        ["]["] = "@function.outer",
-        ["]M"] = "@class.outer",
+        [']['] = '@function.outer',
+        [']M'] = '@class.outer',
       },
       goto_previous_start = {
-        ["[["] = "@function.outer",
-        ["[m"] = "@class.outer",
+        ['[['] = '@function.outer',
+        ['[m'] = '@class.outer',
       },
       goto_previous_end = {
-        ["[]"] = "@function.outer",
-        ["[M"] = "@class.outer",
+        ['[]'] = '@function.outer',
+        ['[M'] = '@class.outer',
       },
     },
     select = {
@@ -58,11 +57,11 @@ require'nvim-treesitter.configs'.setup {
 
       keymaps = {
         -- You can use the capture groups defined in textobjects.scm
-        ["af"] = "@function.outer",
-        ["if"] = "@function.inner",
-        ["ac"] = "@class.outer",
-        ["ic"] = "@class.inner",
+        ['af'] = '@function.outer',
+        ['if'] = '@function.inner',
+        ['ac'] = '@class.outer',
+        ['ic'] = '@class.inner',
       },
     },
   },
-}
+})
