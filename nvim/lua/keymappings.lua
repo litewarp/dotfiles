@@ -5,18 +5,8 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { silent = true })
 
 -- Move selected line / block of text in visual mode
-vim.api.nvim_set_keymap(
-  'x',
-  'K',
-  ":move '<-2<CR>gv-gv",
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  'x',
-  'J',
-  ":move '>+1<CR>gv-gv",
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap('x', 'K', ":move '<-2<CR>gv-gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('x', 'J', ":move '>+1<CR>gv-gv", { noremap = true, silent = true })
 
 -- Keep visual mode indenting
 vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
@@ -35,62 +25,22 @@ vim.api.nvim_set_keymap('n', '<C-p>', '<CMD>Telescope git_files<CR>', { noremap 
 vim.api.nvim_set_keymap('n', '<S-p>', '<CMD>Telescope live_grep<CR>', { noremap = true })
 
 -- Remove highlights
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>l',
-  ':noh<CR><CR>',
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap('n', '<leader>l', ':noh<CR><CR>', { noremap = true, silent = true })
 
 -- Find word/file across project
-vim.api.nvim_set_keymap(
-  'n',
-  '<Leader>pf',
-  'yiw<CMD>Telescope git_files<CR><C-r>+<ESC>',
-  { noremap = true }
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<Leader>pw',
-  '<CMD>Telescope grep_string<CR><ESC>',
-  { noremap = true }
-)
+vim.api.nvim_set_keymap('n', '<Leader>pf', 'yiw<CMD>Telescope git_files<CR><C-r>+<ESC>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>pw', '<CMD>Telescope grep_string<CR><ESC>', { noremap = true })
 
 -- Git
-vim.api.nvim_set_keymap(
-  'n',
-  '<Leader>gla',
-  "<CMD>lua require('plugins.telescope').my_git_commits()<CR>",
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<Leader>glc',
-  "<CMD>lua require('plugins.telescope').my_git_bcommits()<CR>",
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap('n', '<Leader>gla', "<CMD>lua require('plugins.telescope').my_git_commits()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>glc', "<CMD>lua require('plugins.telescope').my_git_bcommits()<CR>", { noremap = true, silent = true })
 
 -- Buffers
-vim.api.nvim_set_keymap(
-  'n',
-  '<Tab>',
-  ':BufferNext<CR>',
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap('n', '<Tab>', ':BufferNext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gn', ':bn<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap(
-  'n',
-  '<S-Tab>',
-  ':BufferPrevious<CR>',
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap('n', '<S-Tab>', ':BufferPrevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gp', ':bp<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap(
-  'n',
-  '<S-q>',
-  ':BufferClose<CR>',
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap('n', '<S-q>', ':BufferClose<CR>', { noremap = true, silent = true })
 
 -- Move between barbar buffers
 vim.api.nvim_set_keymap('n', '<Space>1', ':BufferGoto 1<CR>', { silent = true })
@@ -155,17 +105,9 @@ vim.api.nvim_set_keymap('n', ',', '<NOP>', { noremap = true, silent = true })
 
 -- Open links under cursor in browser with gx
 if vim.fn.has('macunix') == 1 then
-  vim.api.nvim_set_keymap(
-    'n',
-    'gx',
-    "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>",
-    { silent = true }
-  )
+  vim.api.nvim_set_keymap('n', 'gx', "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>", { silent = true })
 else
-  vim.api.nvim_set_keymap(
-    'n',
-    'gx',
-    "<cmd>silent execute '!xdg-open ' . shellescape('<cWORD>')<CR>",
-    { silent = true }
-  )
+  vim.api.nvim_set_keymap('n', 'gx', "<cmd>silent execute '!xdg-open ' . shellescape('<cWORD>')<CR>", { silent = true })
 end
+
+vim.api.nvim_set_keymap('i', '<C-c>', '<Esc>', { noremap = true })

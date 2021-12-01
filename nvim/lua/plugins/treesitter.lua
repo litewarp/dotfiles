@@ -64,4 +64,5 @@ require('nvim-treesitter.configs').setup({
       },
     },
   },
+  vim.api.nvim_exec([[ autocmd BufRead, BufNewFile *.json set filetype=jsonc ]], false),
 })

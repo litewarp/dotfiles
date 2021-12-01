@@ -51,6 +51,9 @@ use({ 'glepnir/dashboard-nvim', config = "require('plugins.dashboard')" })
 -- Themes
 use({ 'bluz71/vim-nightfly-guicolors' })
 use({ 'folke/tokyonight.nvim' })
+use({ 'sainnhe/sonokai' })
+use({ 'sainnhe/gruvbox-material' })
+use({ 'sainnhe/edge' })
 
 -- Treesitter
 use({
@@ -101,7 +104,12 @@ use({
   config = "require('plugins.which-key')",
   event = 'BufWinEnter',
 })
-use({ 'glepnir/galaxyline.nvim', config = "require('plugins.galaxyline')" })
+use({
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  config = "require('plugins.lualine')",
+})
+-- use({ 'glepnir/galaxyline.nvim', config = "require('plugins.galaxyline')" })
 use({ 'romgrk/barbar.nvim', config = "require('plugins.barbar')" })
 use({
   'folke/twilight.nvim',
@@ -111,6 +119,7 @@ use({
 })
 use({ 'karb94/neoscroll.nvim', config = "require('plugins.neoscroll')" })
 use({ 'antoinemadec/FixCursorHold.nvim' }) -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
+
 -- in buffer searching
 use({ 'kevinhwang91/nvim-hlslens' })
 
