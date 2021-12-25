@@ -62,6 +62,7 @@ require('nvim-tree').setup({
       -- list of mappings to set on the tree manually
       list = {
         { key = 'C', cb = tree_cb('cd') },
+        { key = 'o', cb = tree_cb('system_open') },
       },
     },
   },
