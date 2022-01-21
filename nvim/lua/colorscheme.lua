@@ -1,4 +1,4 @@
-vim.cmd('colorscheme sonokai')
+vim.cmd('colorscheme nightfly')
 
 -- Errors
 vim.highlight.create('LspDiagnosticsVirtualTextError', { guifg = 'Red', ctermfg = 'Red', gui = 'bold' }, false)

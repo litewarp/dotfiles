@@ -21,7 +21,7 @@ vim.o.showmode = false --- Don't show things like -- INSERT -- anymore
 vim.o.autoindent = true --- Good auto indent
 vim.o.errorbells = false --- Disables sound effect for errors
 vim.wo.number = true --- Shows current line number
-vim.wo.relativenumber = true --- Enables relative number
+vim.wo.relativenumber = false --- Enables relative number
 vim.wo.cursorline = true --- Highlight of current line
 vim.wo.wrap = false --- Display long lines as just one line
 vim.o.backup = false --- Recommended by coc
@@ -58,4 +58,3 @@ vim.cmd('set formatoptions-=r')
 vim.cmd('set formatoptions-=o')
 vim.cmd('set completeopt=menu,menuone,noselect')
 vim.cmd('set fillchars=fold:\\ ')
-

@@ -54,6 +54,7 @@ use({ 'folke/tokyonight.nvim' })
 use({ 'sainnhe/sonokai' })
 use({ 'sainnhe/gruvbox-material' })
 use({ 'sainnhe/edge' })
+use({ 'projekt0n/github-nvim-theme' })
 
 -- Treesitter
 use({
